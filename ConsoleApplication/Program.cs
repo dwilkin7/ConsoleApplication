@@ -11,7 +11,7 @@ namespace ConsoleApplication
         static void Main(string[] args)
         {
             var name = "Daniel Wilkinson";
-            var location = "Mapleton, UT";
+            var location = "Mapleton, Utah";
 
             Console.WriteLine($"My name is {name}");
             Console.WriteLine($"My location is {location}");
