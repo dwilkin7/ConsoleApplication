@@ -10,11 +10,45 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-            var name = "Daniel Wilkinson";
-            var location = "Mapleton, Utah";
+            string name; // "Daniel Wilkinson";
+            string location; // "Mapleton, Utah";
 
-            Console.WriteLine($"My name is {name}");
-            Console.WriteLine($"My location is {location}");
+            Console.Write($"Please enter your name: ");
+            name = Console.ReadLine();
+
+            Console.Write($"Please enter your location: ");
+            location = Console.ReadLine();
+
+            Console.WriteLine($"Your name is {name}");
+            Console.WriteLine($"Your location is {location}");
+
+            /* Date */
+            var currentDate = DateTime.Now;
+            Console.WriteLine($"The current date is: {currentDate.ToString("d")}");
+
+            /* Christmas */
+            var christmasDay = new DateTime(currentDate.Year, 12, 25);
+            var timeSpan = christmasDay - currentDate;
+            var numberOfDaysUntilChristmas = timeSpan.Days;
+            Console.WriteLine($"The number of days until Christmas: {numberOfDaysUntilChristmas}");
+
+            /* Code from Textbook */
+            double width, height, woodLength, glassArea;
+            string widthString, heightString;
+
+            Console.Write("Please enter a width (in meters): ");
+            widthString = Console.ReadLine();
+            width = double.Parse(widthString);
+
+            Console.Write("Please enter a height (in meters): ");
+            heightString = Console.ReadLine();
+            height = double.Parse(heightString);
+
+            woodLength = 2 * (width + height) * 3.25;
+            glassArea = 2 * (width * height);
+
+            Console.WriteLine("The length of the wood is " + woodLength + " feet");
+            Console.WriteLine("The area of the glass is " + glassArea + " square meters");
 
             Console.WriteLine("Press any key to quit");
             Console.ReadKey();
